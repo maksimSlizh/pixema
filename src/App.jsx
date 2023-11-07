@@ -1,14 +1,13 @@
-import {fetchFilms} from '../src/redux/filmSlice'
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useState, useEffect } from 'react'
+import {fetchMovies} from '../src/redux/movieSlice'
 
 export default function App() {
   const dispatch = useDispatch()
-  const data = useSelector((state) => state.films)
-  const [t, setT] = useState('Avatar')
+  const data = useSelector((state) => state.movie)
   useEffect(() => {
-    dispatch(fetchFilms(t))
-  }, [dispatch, t])
+    dispatch(fetchMovies())
+  }, [dispatch])
 
   return (
     <div>
