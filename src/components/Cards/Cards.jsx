@@ -9,12 +9,12 @@ export function Cards(props) {
   }
   const genres = props.genres.map((i, index) => i.name + ' ')
   return (
-    <div className="card" style={{ width: '18rem' }}>
+    <div className="card" style={{ width: '16.625rem' }}>
       <div className="cards__wrapper">
-        <img className="card-img-top" src={props.poster.url} />
-        <p className="rating">{props.rating.imdb}</p>
+        <img className="card-img-top" style={{position: 'relative'}} src={props.poster.url} />
+        <p className="card__rating">{props.rating.imdb}</p>
       </div>
-      <h4 className="card-title">{renderValue(props.names, 1)}</h4>
+      <h4 className="card-title text-center pt-2">{renderValue(props.names, 1)}</h4>
       <p className="card-tex">{genres}</p>
     </div>
   )

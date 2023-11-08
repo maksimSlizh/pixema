@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {fetchMovies} from '../redux/movieSlice'
+import { fetchMovies } from '../redux/movieSlice'
 import { Cards } from '../components/Cards/Cards'
 
 export function Main() {
@@ -18,7 +18,9 @@ export function Main() {
   }
   return (
     <>
-      {renderCards()}
+      <div className="main">
+        {renderCards()}
+      </div>
     </>
   )
 }

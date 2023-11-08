@@ -1,0 +1,11 @@
+.card {
+  &__rating {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: #22b711;
+    color: rgba(2, 10, 10);
+    padding: 4px;
+    border-radius: 50%;
+  }
+}
