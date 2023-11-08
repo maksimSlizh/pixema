@@ -22,7 +22,7 @@ export const filmMovie = createSlice({
     })
     builder.addCase(fetchMovies.fulfilled, (state, action) => {
       state.loading = false
-      state.data = action.payload
+      state.data = action.payload.docs
     })
     builder.addCase(fetchMovies.rejected, (state, action) => {
       state.loading = false
